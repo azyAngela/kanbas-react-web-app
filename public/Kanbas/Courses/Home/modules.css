@@ -1,0 +1,27 @@
+.wd-buttons-top {
+    text-align: right;
+    float: right;
+}
+
+.container-horizontal {
+    flex-direction: row;
+}
+
+.icon-color {
+    color: green;
+}
+
+
+.list-group-item a{
+    color: red;
+    text-decoration: none;
+}
+.list-item-left-border {
+    border-left: 5px solid green; /* Adjust the width and color as needed */
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #6c757d; /* This is the default breadcrumb divider color in Bootstrap 4, adjust if needed */
+    padding: 0 0.5rem; /* Add some padding on both sides of the divider */
+}

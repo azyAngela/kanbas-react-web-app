@@ -1,142 +1,231 @@
-<table width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="../../../Account/AccountNavigation/index.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../../Home/home.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="../../Home/home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="../../Assignments/AssignmentsList/list.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="../../Grades/grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="../../Settings/detailScreen.html">Settings</a></li>
-            </ul>
-        </td>
-        <td valign="top">
-            <input placeholder="Search for Assignments" />
-            <button>Group</button>
-            <button>Assignment</button>
-            <select>
-                <option>Edit Assignment Dates</option>
-                <option>Duplicate</option>
-            </select>
+<script src="https://kit.fontawesome.com/d4a65bbd4a.js" crossorigin="anonymous"></script>
+<link href="../../../../lib/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="../../../../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="../../../../styles.css" rel="stylesheet" />
+<link href="../../../../Kanbas/KanbasNavigation/index.css" rel="stylesheet" />
+<link href="../../../../Kanbas/Courses/CourseNavigation/index.css" rel="stylesheet" />
+<link href="../../Home/modules.css" rel="stylesheet" />
+
+
+<div class="wd-flex-row-container">
+    <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+            <li><a href="../../../Account/AccountNavigation/Profile/profile.html">
+                    <i class="fa fa-user" aria-hidden="true" id="accountWhite"></i>Account</a></li>
+            <li><a href="../../../Dashboard/dashboard.html">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</a></li>
+            <li class="wd-active"><a href="../../Home/A2/home.html">
+                    <i class="fa fa-book" aria-hidden="true"></i>Courses</a></li>
+            <li><a href="#">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>Calendar</a></li>
+            <li><a href="#">
+                    <i class="fa fa-inbox" aria-hidden="true"></i></br>Inbox</a></li>
+            <li><a href="#"><i class="fa fa-history" aria-hidden="true"></i>History</a></li>
+            <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Studio</a></li>
+            <li><a href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i>Commons</a></li>
+            <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i></br>Help</a></li>
+        </ul>
+    </div>
+<div class="container-fluid">
+    <div class="row">
+        <nav aria-label="breadcrumb" class="d-none d-sm-block">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <i class="fa fa-bars wd-icon text-danger" aria-hidden="true"></i>
+                    <a href="#" style="text-decoration: none; color: black;">CS4550.12631.202410</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+            </ol>
             <hr />
-            
-            <table>
-                <tr>
-                    <td valign="top">
-                        <h3>ASSIGNMENTS 40% OF TOTAL</h3>
-                    </td>
-                    <td valign="top">
-                        <select>
-                            <option>Edit </option>
-                            <option>Duplicate</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A1 - ENV+HTML</a>
-                    <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A2 - CSS+BOOTSTRAP</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A3 - JS+REACT</a>        <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A4 - STATE+REDUX</a>        <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A5 - NODE+SESSION</a>        <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">A6 - MONGO+MONGOOSE</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-            </ul>
-            
-            <table>
-                <tr>
-                    <td valign="top">
-                        <h3>QUIZZES 10% OF TOTAL</h3>
-                    </td>
-                    <td valign="top">
-                        <select>
-                            <option>Edit </option>
-                            <option>Duplicate</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Q1 - HTML</a>        <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Q2 - CSS</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Q3 - JS,ES6</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Q4 - NODE</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Q5 - MONGO</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-            </ul>
-            
-            <table>
-                <tr>
-                    <td valign="top">
-                        <h3>EXAMS 20% OF TOTAL</h3>
-                    </td>
-                    <td valign="top">
-                        <select>
-                            <option>Edit </option>
-                            <option>Duplicate</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Midterm</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Final</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-            </ul>
-            
-            <table>
-                <tr>
-                    <td valign="top">
-                        <h3>PROJECT 30% OF TOTAL</h3>
-                    </td>
-                    <td valign="top">
-                        <select>
-                            <option>Edit </option>
-                            <option>Duplicate</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            <ul>
-                <li><a href="../../Assignments/AssignmentsEditor/assignment.html">Project</a>         <br />
-                    <a href="#">Multiple Modules</a> | Not available yet</li>
-            </ul>
-        </td>
-    </tr>
-</table>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <div class="d-none d-md-block">
+                <ul class="wd-course-navigation">
+                    <li><a href="../../Home/A2/home.html">Home</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Piazza</a></li>
+                    <li><a href="#">Zoom Meetings</a></li>
+                    <li class="wd-active"><a href="../AssignmentsList/list.html">Assignments</a></li>
+                    <li><a href="#">Quizzes</a></li>
+                    <li><a href="../../Grades/grades.html">Grades</a></li>
+                    <li><a href="#">People</a></li>
+                    <li><a href="#">Panopto Video</a></li>
+                    <li><a href="#">Discussions</a></li>
+                    <li><a href="#">Announcements</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Files</a></li>
+                    <li><a href="#">Rubrics</a></li>
+                    <li><a href="#">Outcomes</a></li>
+                    <li><a href="#">Collaborations</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="../../Settings/detailScreen.html">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="wd-flex-row-container-flex-end">
+                        <div class="col">
+                            <input class="form-control w-25" placeholder="Search for Assignments" />
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-light"><i class="fa fa-plus"
+                                    aria-hidden="true"></i>Group</button>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-plus"
+                                    aria-hidden="true"></i>Assignment</button>
+                            <button type="dropdown" class="btn btn-light">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+                <div class="row">
+                    <ul class="list-group">
+                        <li
+                            class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v m" aria-hidden="true"></i>
+                                <i class="fa fa-caret-down mx-2" aria-hidden="true"></i>
+                                <text>Assignments</text>
+                            </div>
+                            <div>
+                                <span class="border border-black rounded-pill" style="margin-right: 10px;">40% of
+                                    Total</span>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-plus float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border ">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A1 SETUP</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 0 - SETUP - Week starting on Monday, September 5th (9/5/2022) | <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A2 HTML</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 1 - HTML - Week starting on Monday, September 5th (9/5/2022) | <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A3 CSS</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 2 - CSS - Week starting on Monday, September 5th (9/5/2022) | <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A4 BOOTSTRP</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 3 - bootstrap - Week starting on Monday, September 5th (9/5/2022) | <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A5 JAVASCRIPT</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 4 - javascript - Week starting on Monday, September 5th (9/5/2022) | <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center list-item-left-border">
+                            <div>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                <i class="fa fa-book mx-2 text-success" aria-hidden="true"></i>
+                                <a href="../AssignmentsEditor/assignment.html" style="color: black;">A6 REACT</a><br />
+                                <div class="subtitle">
+                                    <small class="text-muted">
+                                        Week 5 - react & routing - Week starting on Monday, September 5th (9/5/2022) |
+                                        <br />
+                                        Due Sep 19, 2022 at 11:59pm | 100pts
+                                    </small>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="fa fa-ellipsis-v float-end" aria-hidden="true" style="margin-left: 10px;"></i>
+                                <i class="fa fa-check-circle float-end icon-color" aria-hidden="true"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+

@@ -1,0 +1,47 @@
+.wd-profile-edit-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.wd-icon {
+    color: red;
+    margin-right: 10px; /* Adjust the space between the icon and text */
+}
+
+.wd-user-icon {
+    font-size: 100px; 
+    color: gray;
+}
+
+.wd-profile-navigation {
+    list-style-type: none;
+    padding: 0;
+}
+
+.wd-profile-navigation li {
+    margin-bottom: 10px;
+}
+
+.wd-active {
+    font-weight: bold;
+}
+
+.wd-short-input {
+    width: 250px;
+}
+
+.wd-red-text {
+    color: red;
+    text-decoration: none;
+}
+
+.wd-link {
+    align-items: center;
+    justify-content: center;
+}
+
+.wd-right {
+    float: right;
+    text-align: right;
+}

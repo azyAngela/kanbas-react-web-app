@@ -1,94 +1,111 @@
-<select>
-    <option>Gradebook</option>
-    <option>Gradebook2</option>
-    <option>Gradebook3</option>
-</select>
-<button>Import</button>
-<select>
-    <option>Export</option>
-    <option>Unpublish</option>
-</select>
-<button>Configure</button>
+<script src="https://kit.fontawesome.com/d4a65bbd4a.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="../../../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+<link href="../../../styles.css" rel="stylesheet" />
+<link href="../../../Kanbas/KanbasNavigation/index.css" rel="stylesheet" />
+<link href="../../../Kanbas/Courses/CourseNavigation/index.css" rel="stylesheet" />
+<link href="../../Courses/Home/modules.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
-<h3>Student Names</h3>
-<table width="100%">
-    <tr>
-        <td>Student Names<br />
-            <input title="Type the name of the student to search for"  placeholder="Search Stuents" />
-        </td>
-        <td>Assignment Names<br />
-            <input placeholder="Search Assignments"/>
-        </td>
-    </tr>
-</table>
+<div class="wd-flex">
+    <div class="row mb-3">
+        <div class="col-12 d-flex justify-content-end">
+            <button type="button" class="btn btn-light me-2">
+                <i class="fa-solid fa-file-import" style="margin-right: 5px;"></i>Import</button>
+            <button type="button" class="btn btn-light me-2">
+                <i class="fa-solid fa-file-export" style="margin-right: 5px;"></i></i>Export</button>
+            <button type="button" class="btn btn-light">
+                <i class="fa fa-cog" aria-hidden="true"></i></button>
+        </div>
+    </div>
 
-<button>Apply Filters</button>
-
-<table width="100%" border="1">
-    <thead>
-        <tr>
-            <th>Student Name</th>
-            <th>A1 SETUP<br /> Out of 100</th>
-            <th>A2 HTML<br /> Out of 100</th>
-            <th>A3 CSS<br /> Out of 100</th>
-            <th>A4 BOOTSTRAP<br /> Out of 100</th>
-            <th>A5 JAVASCRIPT<br /> Out of 100</th>
-            <th>A6 REACT<br /> Out of 100</th>
-            <th>A7 DEDUX<br /> Out of 100</th>
-            <th>A8 NODE<br /> Out of 100</th>
-            <th>A9 MONGO<br /> Out of 100</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Alice WonderLand</td>
-            <td>97</td>
-            <td>98</td>
-            <td>98</td>
-            <td>98</td>
-            <td><input value="98"/></td>
-            <td>93</td>
-            <td>98</td>
-            <td>95</td>
-            <td>98</td>
-        </tr>
-        <tr>
-            <td>Princes Leia</td>
-            <td>98</td>
-            <td>88</td>
-            <td>98</td>
-            <td>98</td>
-            <td>98</td>
-            <td>98</td>
-            <td>70</td>
-            <td>98</td>
-            <td><input value="65"/></td>
-        </tr>
-        <tr>
-            <td>Luke Skywalker</td>
-            <td>98</td>
-            <td>98</td>
-            <td>98</td>
-            <td>98</td>
-            <td><input value="78"/></td>
-            <td>100</td>
-            <td>98</td>
-            <td>98</td>
-            <td>86</td>
-        </tr>
-        <tr>
-            <td>Han Solo</td>
-            <td>98</td>
-            <td><input value="78"/></td>
-            <td>98</td>
-            <td>50</td>
-            <td>98</td>
-            <td>100</td>
-            <td>98</td>
-            <td>98</td>
-            <td>100</td>
-        </tr>
-    </tbody>
-    <tfoot></tfoot>
-</table>
+    <div class="row mb-3">
+        <div class="col-6">
+            <h6>Students Names</h6>
+            <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                  <select class="form-select" id="dropdownSelect">
+                    <option value="option1">Search Students</option>
+                    <option value="option2">Student 1</option>
+                    <option value="option3">Student 2</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6">
+            <h6>Assignment Names</h6>
+            <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+                  <select class="form-select" id="dropdownSelect">
+                    <option value="option1">Search Assignments</option>
+                    <option value="option2">Student 1</option>
+                    <option value="option3">Student 2</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <button type="button" class="btn btn-secondary" style="width: 200px;">
+            <i class="fa fa-filter" aria-hidden="true" style="padding-right: 10px;"></i>Apply Filters</button>
+    </div>
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped border" style="border: 1px solid #000">
+                <thead>
+                    <tr>
+                        <th>Student Name<br /> Out of 100</th>
+                        <th>A1 SETUP<br /> Out of 100</th>
+                        <th>A2 HTML<br /> Out of 100</th>
+                        <th>A3 CSS<br /> Out of 100</th>
+                        <th>A4 BOOTSTRAP<br /> Out of 100</th>
+                        <th>A5 JAVASCRIPT<br /> Out of 100</th>
+                        <th>A6 REACT<br /> Out of 100</th>
+                        <th>A7 REDUX<br /> Out of 100</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Doxa Asibey</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td><input value="78" /></td>
+                        <td>60%</td>
+                        <td>60%</td>
+                        <td>60%</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Thuy Tien Bui</td>
+                        <td>90%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>70%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Yetong Chen</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>60%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                    </tr>
+                    <tr>
+                        <td>Yung Chien</td>
+                        <td>60%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>60%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
