@@ -6,8 +6,28 @@
 <link rel="stylesheet" href="./profileEditIndex.css" />
 <link rel="stylesheet" href="../profileIndex.css" />
 
+<div class="d-sm-none">
+    <div class="row" style="height: 70px; background-color: black;">
+        <div class="col-3 text-white">
+            <a href="../../../../KanbasNavigation/index.html">
+                <i class="fa fa-bars text-white" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="col-6 text-white text-center">
+            <text>CS4450.12631.202310</text><br />
+            <text>Modules</text>
+        </div>
+        <div class="col-3 text-white">
+            <a href="../../../../KanbasNavigation/courseNavigtionSmall.html">
+                <i class="fa fa-angle-down float-end text-white" aria-hidden="true" style="margin-left: 10px;"></i>
+            </a>
+            <i class="fa fa-tripadvisor float-end" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+
 <div class="wd-flex-row-container">
-    <div class="wd-bg-color-black"> 
+    <div class="wd-bg-color-black d-none d-md-block"> 
         <ul class="wd-kanbas-navigation">
             <li class="wd-active"><a href="../../../../Account/AccountNavigation/Profile/profile.html">
                 <i class="fa fa-user" aria-hidden="true" id="accountWhite"></i>Account</a></li>
@@ -27,14 +47,14 @@
     </div> 
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col d-none d-sm-block">
                 <div>
                     <i class="fa fa-bars wd-icon" aria-hidden="true"></i> Angela An's Profile
                     <hr />
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 d-flex col-md-2">
+                <div class="col-12 d-flex col-md-2  d-none d-md-block">
                     <ul class="wd-profile-navigation">
                         <li><a href="#">Notifications</a></li>
                         <li class="wd-active"><a href="../../../AccountNavigation/Profile/profile.html">Profile</a></li>
