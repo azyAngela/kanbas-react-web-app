@@ -1,0 +1,12 @@
+.custom-list-group-status .list-group-item {
+    border: none;
+    background-color: white;
+    margin-left: 0px;
+}
+
+.wd-color-r {
+    color: red;
+}
+.wd-color-g {
+    color: gray;
+}
