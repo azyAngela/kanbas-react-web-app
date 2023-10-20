@@ -69,6 +69,14 @@
     border-radius: 0 !important; /* Remove the rounded corners */
 }
 
+.custom-list-group .nu-icon {
+    padding: 0px;
+    margin: 0px;    
+    width: 90px;
+    height: 90px;
+    margin-left: 10px;
+}
+
 .custom-list-group .list-group-item.active {
     background-color: white; /* Background color for the selected item */
     color: red; /* Text color for the selected item */

@@ -28,19 +28,22 @@ function KanbasNavigation() {
     const { pathname } = useLocation();
     return (
 
-            <div className="list-group custom-list-group">
-                {links.map((link, index) => (
-                    <Link
-                        key={index}
-                        to={link === "Courses" ? "/Kanbas/Dashboard" : `/Kanbas/${link}`}
-                        className={`list-group-item custom-list-item ${pathname.includes(link) ? "active" : ""} ${index === links.length - 1 ? "flex-grow-1" : ""} ${index === links.length}`}>
-                        <div className="d-flex flex-column align-items-center">
-                            <div> {linkToIconMap[link]}</div>
-                            {link}
-                        </div>
-                    </Link>
-                ))}
-            </div>
+        <div className="list-group custom-list-group">
+            <Link className='list-group-item custom-list-item nu-icon '>
+                <img className="img-fluid" src={require("./logo.png")} alt="NU Logo" />
+            </Link>
+            {links.map((link, index) => (
+                <Link
+                    key={index}
+                    to={link === "Courses" ? "/Kanbas/Dashboard" : `/Kanbas/${link}`}
+                    className={`list-group-item custom-list-item ${pathname.includes(link) ? "active" : ""} ${index === links.length - 1 ? "flex-grow-1" : ""} ${index === links.length}`}>
+                    <div className="d-flex flex-column align-items-center">
+                        <div> {linkToIconMap[link]}</div>
+                        {link}
+                    </div>
+                </Link>
+            ))}
+        </div>
 
     );
 }
