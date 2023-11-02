@@ -3,34 +3,9 @@ import { Link } from "react-router-dom";
 import db from "../Database";
 import { addTodo, setTodo } from "../../Labs/a4/ReduxExamples/todos/todosReducer";
 import { add } from "../../Labs/a4/ReduxExamples/AddRedux/addReducer";
-function Dashboard() {
-    const [courses, setCourses] = useState(db.courses);
-    const [newCourse, setNewCourse] = useState({
-        name: "New Course",
-        number: "New Number",
-        startDate: "2023-09-10",
-        endDate: "2023-12-15",
-      });
-
-    const addCourse = (newC) => {
-        setCourses([
-            ...courses,
-            { ...newCourse, _id: new Date().getTime().toString() },
-          ]);
-        setNewCourse("");
-    };
-
-
-    const deleteCourse = (id) => {
-        const newCourses = courses.filter((course) => course._id !== id);
-        setCourses(newCourses);
-    };
-
-    const updateCourse = (courseToUpdate) => {
-        const newCourses = courses.map((course) => (course._id === courseToUpdate._id ? courseToUpdate : course));
-        setCourses(newCourses);
-        setNewCourse("");
-    };
+function Dashboard({ courses, newCourse, setNewCourse, addCourse,
+    deleteCourse, updateCourse }
+  ) {
 
 
     return (
