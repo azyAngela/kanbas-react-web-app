@@ -3,17 +3,37 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import db from "../../../Database";
 import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import { IoCheckmarkCircleSharp } from "react-icons/io5";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addAssignment, deleteAssignment, updateAssignment, selectAssignment } from "../assignmentsReducer";
+import { add } from "../../../../Labs/a4/ReduxExamples/AddRedux/addReducer";
+import { useLocation } from "react-router-dom";
 
 function AssignmentEditor() {
     const { assignmentId } = useParams();
-    const assignment = db.assignments.find(
-        (assignment) => assignment._id === assignmentId);
+    // const assignment = db.assignments.find(
+    //     (assignment) => assignment._id === assignmentId);
 
+    const assignments = useSelector(
+        (state) => state.assignmentsReducer.assignments,
+    );
+    const assignment = useSelector((state) => {
+        return state.assignmentsReducer.assignment;
+    });
+
+    const dispatch = useDispatch();
+
+    const location = useLocation();
+    const isCreateNewAssignment = location.pathname.endsWith('/createNewAssignment');
 
     const { courseId } = useParams();
     const navigate = useNavigate();
     const handleSave = () => {
-        console.log("Actually saving assignment TBD in later assignments");
+        if (isCreateNewAssignment) {
+        dispatch(addAssignment({ ...assignment, title: assignment.title, description: assignment.description, points: assignment.points, due: assignment.due, from: assignment.from, to: assignment.to, course: courseId  }));
+        } else {
+        dispatch(updateAssignment(assignment));
+        }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
     return (
@@ -30,9 +50,21 @@ function AssignmentEditor() {
             <hr />
             <text>Assignment Name</text>
             <input value={assignment.title}
-                className="form-control mb-3" />
+                className="form-control mb-3" onChange={(e) =>
+                    dispatch(
+                        selectAssignment({ ...assignment, title: e.target.value }),
+                    )
+                } />
             <textarea class="form-control"
-                rows="3">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semester. We will add new content every week, pushing the code to a GitHub source repository, and then deploying the content to a remote server hosted on Netlify.
+                rows="3" value={assignment.description}
+                onChange={(e) =>
+                    dispatch(
+                        selectAssignment({
+                            ...assignment,
+                            description: e.target.value,
+                        }),
+                    )
+                }>
             </textarea>
             <div className="row">
                 <div className="col-4 text-end mt-3">
@@ -40,10 +72,17 @@ function AssignmentEditor() {
                 </div>
                 <div className="col-8 w-50">
                     <input value={assignment.points}
-                        className="form-control mt-3" placeholder={assignment.title} />
+                        className="form-control mt-3" placeholder={assignment.title} onChange={(e) =>
+                            dispatch(
+                                selectAssignment({
+                                    ...assignment,
+                                    points: e.target.value,
+                                }),
+                            )
+                        }/>
                 </div>
             </div>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-4 text-end mt-3">
                     <text>Assignment Group</text>
                 </div>
@@ -96,7 +135,7 @@ function AssignmentEditor() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="row">
                 <div className="col-4 text-end mt-3">
                     <text>Assign</text>
@@ -106,7 +145,7 @@ function AssignmentEditor() {
                         <div className="card-body">
                             <h6 class="card-title">Assign to</h6>
                             <input type="email" class="form-control" id="exampleFormControlInput1"
-                                placeholder={assignment.title}></input>
+                                placeholder="Everyone"></input>
                             <h6 class="card-title mt-3">Due</h6>
                             <input type="date" value="2023-01-01" name="due-date" class="form-control"></input>
                             <div className="row mt-3">
