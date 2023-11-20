@@ -4,11 +4,15 @@ import Courses from "./Courses";
 import Dashboard from "./Dashboard";
 import { Route, Routes, Navigate } from "react-router-dom";
 import db from "./Database";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import store from "./store";
 import { Provider } from "react-redux";
+import axios from "axios";
+
+import * as client from "./Courses/client";
+
 function Kanbas() {
-  const [courses, setCourses] = useState(db.courses);
+  const [courses, setCourses] = useState([]);
   const [newCourse, setNewCourse] = useState({
     name: "New Course",
     number: "RS5610",
@@ -16,25 +20,47 @@ function Kanbas() {
     endDate: "2023-12-15",
   });
 
-  const addCourse = (newC) => {
-    setCourses([
-      ...courses,
-      { ...newCourse, _id: new Date().getTime().toString() },
-    ]);
-    setNewCourse("");
+
+  // const updateCourse = (courseToUpdate) => {
+  //   const newCourses = courses.map((course) => (course._id === courseToUpdate._id ? courseToUpdate : course));
+  //   setCourses(newCourses);
+  //   setNewCourse("");
+  // };
+  const URL = "http://localhost:4000/api/courses";
+  const findAllCourses = async () => {
+    const courses = await client.findAllCourses();
+    setCourses(courses);
+  };
+
+  const addCourse = async () => {
+    const course = await client.addCourse(newCourse);
+    setCourses([course, ...courses]);
+  };
+
+  const deleteCourse = async (course) => {
+    await client.deleteCourse(course);
+    setCourses(courses.filter(
+      (c) => c._id !== course));
+  };
+
+  const updateCourse = async (course) => {
+    await client.updateCourse(course);
+    setCourses(
+      courses.map((c) => {
+        if (c._id === course._id) {
+          return course;
+        }
+        return c;
+      })
+    );
+    setNewCourse({ name: "" });
   };
 
 
-  const deleteCourse = (id) => {
-    const newCourses = courses.filter((course) => course._id !== id);
-    setCourses(newCourses);
-  };
+  useEffect(() => {
+    findAllCourses();
+  }, []);
 
-  const updateCourse = (courseToUpdate) => {
-    const newCourses = courses.map((course) => (course._id === courseToUpdate._id ? courseToUpdate : course));
-    setCourses(newCourses);
-    setNewCourse("");
-  };
 
   return (
     <Provider store={store}>
