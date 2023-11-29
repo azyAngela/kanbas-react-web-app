@@ -19,7 +19,7 @@ function Courses() {
     const lastPart = pathname.split('/').pop();
 
     const { courseId } = useParams();
-    const URL = "http://localhost:4000/api/courses";
+    const URL = "https://kanbas-node-server-app-amul.onrender.com/api/courses";
     const [course, setCourse] = useState({});
     const findCourseById = async (courseId) => {
       const response = await axios.get(
