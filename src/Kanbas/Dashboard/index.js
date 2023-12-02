@@ -5,12 +5,20 @@ import { addTodo, setTodo } from "../../Labs/a4/ReduxExamples/todos/todosReducer
 import { add } from "../../Labs/a4/ReduxExamples/AddRedux/addReducer";
 function Dashboard({ courses, newCourse, setNewCourse, addCourse,
     deleteCourse, updateCourse }
-  ) {
+) {
 
 
     return (
         <div>
             <h1>Dashboard</h1>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Link to="/Kanbas/Signin">
+                    <button className="btn btn-info float-end" >Log in</button>
+                </Link>
+                <Link to="/Kanbas/Signup">
+                    <button className="btn btn-primary float-end">Sign Up</button>
+                </Link>
+            </div>
             <div className="list-group">
 
                 <li className="list-group-item">
@@ -25,7 +33,7 @@ function Dashboard({ courses, newCourse, setNewCourse, addCourse,
                                 name: e.target.value
                             }
                             )
-                            
+
                         }
                     />
                 </li>
@@ -33,7 +41,7 @@ function Dashboard({ courses, newCourse, setNewCourse, addCourse,
                 {courses.map((course) => (
                     <div key={course._id} className="list-group-item" style={{ width: "500px" }}>
                         <Link to={`/Kanbas/Courses/${course._id}`}>
-                        <span style={{textDecorationLine: 'none', color: 'black' }}>{course.name}</span>
+                            <span style={{ textDecorationLine: 'none', color: 'black' }}>{course.name}</span>
                         </Link>
                         <button onClick={() => deleteCourse(course._id)} className="btn btn-danger float-end me-2">Delete</button>
                         <button onClick={() => setNewCourse(course)} className="btn btn-primary float-end" style={{ marginRight: "10px" }}>Edit</button>
