@@ -30,7 +30,7 @@ function Kanbas() {
   //   setCourses(newCourses);
   //   setNewCourse("");
   // };
-  const URL = "https://kanbas-node-server-app2-dolc.onrender.com/api/courses";
+  const URL = "http://localhost:4000/api/courses";
   const findAllCourses = async () => {
     const courses = await client.findAllCourses();
     setCourses(courses);
